@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">Download Data</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">prc stands for preferred committee. Get segregated and clean data to reduce paper work based on Preferences and Committee</p>
+      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white"></h1>
+    </div>
+
+    <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+      <input class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Names..">
+      <br>
+      <a href="/admin"><button class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Go to Approvals Page</button></a>
+      <form method="POST" action="#">
+      </form>
+      <br>
+      <table id="myTable" class="table-auto w-full text-left whitespace-no-wrap">
+        <thead>
+          <tr>
+            <th class="w-10 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br">Committee</th>
+            <th class="w-10 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br">List of 1st Preferences</th>
+
+            <th class="w-10 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br">List of 2nd Preferences</th>
+            <th class="w-10 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br">List of 3rd Preferences</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <form method="POST" action="#">
+          
+          <tr>
+            <td class="px-4 py-3 text-white">UNSC</td>
+            <td class="w-10 text-center">
+              <button value="prc1:UNSC-prp1" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc1</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc2:UNSC-prp2" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc2</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc3:UNSC-prp3" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc3</button>
+            </td>
+          </tr>
+
+                    
+          <tr>
+            <td class="px-4 py-3 text-white">UNGA-DISEC</td>
+            <td class="w-10 text-center">
+              <button value="prc1:UNGA-DISEC-prp1" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc1</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc2:UNGA-DISEC-prp2" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc2</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc3:UNGA-DISEC-prp3" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc3</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-4 py-3 text-white">Lok Sabha</td>
+            <td class="w-10 text-center">
+              <button value="prc1:Lok Sabha-prp1" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc1</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc2:Lok Sabha-prp2" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc2</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc3:Lok Sabha-prp3" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc3</button>
+            </td>
+          </tr>
+
+          
+          <tr>
+            <td class="px-4 py-3 text-white">Assam Vidhan Sabha</td>
+            <td class="w-10 text-center">
+              <button value="prc1:Assam Vidhan Sabha-prp1" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc1</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc2:Assam Vidhan Sabha-prp2" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc2</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc3:Assam Vidhan Sabha-prp3" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc3</button>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="px-4 py-3 text-white">IPC</td>
+            <td class="w-10 text-center">
+              <button value="prc1:IPC-prp1" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc1</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc2:IPC-prp2" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc2</button>
+            </td>
+            <td class="w-10 text-center">
+              <button value="prc3:IPC-prp3" name="btn" class="flex ml-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">prc3</button>
+            </td>
+          </tr>
+          
+        </tbody></form>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
+{% endblock %}

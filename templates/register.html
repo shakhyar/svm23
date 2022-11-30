@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+<div class="bg-gray-900 min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0" style="font-family:'Lato',sans-serif;">
+
+    <header class="max-w-lg mx-auto">
+        <a href="#">
+            <h1 class="text-4xl font-bold text-white text-center">Registration</h1>
+        </a>
+    </header>
+<main class="bg-black max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl body-bg">
+    <section>
+
+        <h3 class="text-white font-bold text-l">Register for the <h3 class="text-white font-bold text-2xl">Sivasagar Model United Nations 2023</h3>
+        <p class="text-gray-600 pt-2">Please note that all fields are compulsory</p>
+        <p class="text-red-600 pt-4">{{msg}}</p>
+    </section>
+
+    <section class="mt-10">
+
+        <form class="flex flex-col" method="POST" action="#">
+            <h3 class="text-white font-bold text-l">Contacts Section</h3>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Name</label>
+                <input type="text" name="name" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Full name" required>
+            </div>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Standard</label>
+                <input type="number" name="std" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Standard you are studying in" required>
+            </div>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Name of Institution</label>
+                <input type="text" name="school" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Name of Institution you are studying in" required>
+            </div>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3">Email</label>
+                <input type="text" name="email" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Your Email Account" required>
+            </div>
+            
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Phone Number</label>
+                <input type="number" name="ph1" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Phone Number" required>
+            </div>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">WhatsApp Number</label>
+                <input type="number" name="ph2" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="WhatsApp Number" required>
+            </div>
+            
+            <br>
+            <h3 class="text-white font-bold text-l">First Preferences</h3>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" >Preferred Committee(1st Preference)</label>
+                <select class="rounded border border-gray-700 focus:ring-2 focus:ring-pink-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-pink-500 text-black pl-3 pr-10" name="prc1" required>
+                <option disabled selected>Select</option>
+                <option>UNSC</option>
+                <option>UNGA-DISEC</option>
+                <option>Lok Sabha</option>
+                <option>Assam Vidhan Sabha</option>
+                <option>IPC</option>
+              </select>
+            </div>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Preferred Portfolio</label>
+                <input type="text" name="prp1" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Eg: France for DISEC, Journalist if IPC, and vice versa" required>
+            </div>
+            
+            <br>
+            <h3 class="text-white font-bold text-l">Second Preferences</h3>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" >Preferred Committee(2nd Preference)</label>
+                <select class="rounded border border-gray-700 focus:ring-2 focus:ring-pink-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-pink-500 text-black pl-3 pr-10" name="prc2" required>
+                <option disabled selected>Select</option>
+                <option>UNSC</option>
+                <option>UNGA-DISEC</option>
+                <option>Lok Sabha</option>
+                <option>Assam Vidhan Sabha</option>
+                <option>IPC</option>
+              </select>
+            </div>
+
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Preferred Portfolio</label>
+                <input type="text" name="prp2" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Eg: France for DISEC, Journalist if IPC, and vice versa" required>
+            </div>
+            <br>
+            <h3 class="text-white font-bold text-l">Third Preferences</h3>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" >Preferred Committee(3rd Preference)</label>
+                <select class="rounded border border-gray-700 focus:ring-2 focus:ring-pink-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-pink-500 text-black pl-3 pr-10" name="prc3" required>
+                <option disabled selected>Select</option>
+                <option>UNSC</option>
+                <option>UNGA-DISEC</option>
+                <option>Lok Sabha</option>
+                <option>Assam Vidhan Sabha</option>
+                <option>IPC</option>
+              </select>
+            </div>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Preferred Portfolio</label>
+                <input type="text" name="prp3" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Eg: France for DISEC, Journalist if IPC, and vice versa" required>
+            </div>
+            <br>
+            <h3 class="text-white font-bold text-l">Miscellaneous</h3>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Any prior MUN or Debate experiences</label>
+                <textarea name ='exp' class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Any past MUN or Debate Experiences" required></textarea>
+            </div>
+
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Food Preference</label>
+                <select class="rounded border border-gray-700 focus:ring-2 focus:ring-pink-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-pink-500 text-black pl-3 pr-10" name="fp" required>
+                <option disabled selected>Select</option>
+                <option>Veg</option>
+                <option>Non-Veg</option>
+              </select>
+            </div>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" >Would you require accomodation</label>
+                <select class="rounded border border-gray-700 focus:ring-2 focus:ring-pink-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-pink-500 text-black pl-3 pr-10" name="acomm" required>
+                <option disabled selected>Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            
+            </div>
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" >Ambassador Code</label>
+                <select class="rounded border border-gray-700 focus:ring-2 focus:ring-pink-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-pink-500 text-black pl-3 pr-10" name="amb" required>
+                <option disabled selected>Select</option>
+                <option>ABCD</option>
+                <option>12345</option>
+              </select>
+            
+            </div>
+
+            <div class="mb-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Notes/Messages for us</label>
+                <textarea name ='notes' class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" placeholder="Notes if any.. Not compulsory"></textarea>
+            </div>
+            
+            <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" type="submit">Register</button>
+        </form>
+    </section>
+</main>
+</div>
+{% endblock %}

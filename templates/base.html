@@ -1,0 +1,78 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+  html {
+  scroll-behavior: smooth;
+}
+  </style>
+
+  <style>
+        .body-bg {
+            background-color: #2124e8;
+            background-image: linear-gradient(315deg, #217ee8 0%, #420d39 74%);
+        }
+    </style>
+        <style>
+            .hero-bg {
+                background-color: #e821e8;
+                background-image: linear-gradient(315deg, #c721e8 0%, #2c88d3 74%);
+            }
+        </style>
+  <title>SVMUN 23</title>
+</head>
+<body>
+
+
+{% block header %}
+
+<header class="text-gray-400 bg-gray-900 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+      <a href="/admin" class="mr-5 hover:text-white">Admin Dashboard</a>
+      <a href="/payments" class="mr-5 hover:text-white">Payments</a>
+      <a href='/contacts' class="mr-5 hover:text-white">Contacts/Mailings</a>
+      <a href="/committee" class="mr-5 hover:text-white">Committees/Portfolios</a>
+      <a href="/amb" class="mr-5 hover:text-white">Ambassador Codes</a>
+      <a href='/more-downloads' class="hover:text-white">More Downloads</a>
+      <button class="inline-flex items-center bg-pink-400 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-white mt-4 md:mt-0">Instructions
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    </nav>
+    <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+      
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+
+{% block footer %}
+<footer class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+  </div>
+  <div class="border-t border-gray-800">
+    <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
+      <div class="flex md:flex-nowrap flex-wrap justify-center items-end md:justify-start">
+
+        <a href="/admin-logout"><p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 text-center sm:text-left">Logout</p></a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-800 bg-opacity-75">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-400 text-sm text-center sm:text-left">© SVMUN23. Developed by
+        <a href="https://instagram.com/shakhyar_" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@shakhyar_</a>
+      </p>
+    </div>
+  </div>
+</footer>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">Committee Section</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-justify">Keep calm, you can find the raw/original data below these staistics. Click More Downloads from above to download the data</p>
+      
+      
+
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4 text-center">
+       <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{unsc}}</h2>
+        <p class="leading-relaxed">Total UNSC (ungrouped)</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{ds}}</h2>
+        <p class="leading-relaxed">Total Disec (ungrouped)</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{lk}}</h2>
+        <p class="leading-relaxed">Total Lok Sabha (ungrouped)</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{abs_}}</h2>
+        <p class="leading-relaxed">Total Vidhan Sabha (ungrouped)</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{ipc}}</h2>
+        <p class="leading-relaxed">Total IPC (ungrouped)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4 text-center">
+       <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{unsc1}}</h2>
+        <p class="leading-relaxed">UNSC as 1st pref.</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{ds1}}</h2>
+        <p class="leading-relaxed">Disec as 1st pref.</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{lk1}}</h2>
+        <p class="leading-relaxed">Lok Sabha as 1st pref.</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{abs1}}</h2>
+        <p class="leading-relaxed">Vidhan Sabha as 1st pref.</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{ipc1}}</h2>
+        <p class="leading-relaxed">IPC as 1st pref.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4 text-center">
+       <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{unscp}}%</h2>
+        <p class="leading-relaxed">UNSC registration %</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{dsp}}%</h2>
+        <p class="leading-relaxed">DISEC registration %</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{lkp}}%</h2>
+        <p class="leading-relaxed">Lok Sabha registration %</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{absp}}%</h2>
+        <p class="leading-relaxed">Assam Bidhan Sabha registration %</p>
+      </div>
+      <div class="p-4 sm:w-1/4 w-1/2">
+        <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">{{ipcp}}%</h2>
+        <p class="leading-relaxed">IPC registration %</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    </div>
+
+    <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+      <input class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Names..">
+      <br>
+
+      <br>
+      <table id="myTable" class="table-auto w-full text-left whitespace-no-wrap">
+        <thead>
+          <tr>
+          	<th class="w-10 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br">Name</th>
+            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl">prc1</th>
+
+            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl">prc2</th>
+            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl">prc3</th>
+
+          </tr>
+        </thead>
+        <tbody>
+        	<form method="POST" action="#">
+        	{% for i in l %}
+          <tr>
+          	<td class="px-4 py-3 text-white">{{i[0]}}</td>
+            <td class="px-4 py-3 text-white">{{i[4]}} for {{i[1]}}</td>
+            <td class="px-4 py-3 text-white">{{i[5]}} for {{i[2]}}</td>
+            <td class="px-4 py-3 text-white">{{i[6]}} for {{i[3]}}</td>
+
+
+            <td class="w-10 text-center">
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody></form>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
+{% endblock %}
